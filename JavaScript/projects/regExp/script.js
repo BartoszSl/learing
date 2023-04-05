@@ -15,25 +15,27 @@ const showMsg = () => {
 		p.textContent = 'Masz bardzo dobre hasło!';
 		p.style.color = 'lime';
 	} else if (
-        pass.value.length > minValue &&
+		pass.value.length > minValue &&
 		pass.value.match(letters) &&
 		pass.value.match(numbers)
-        ) {
-            p.textContent = 'Masz dobre hasło! '
-            p.style.color = 'gold';
-        }else {
-            p.textContent = 'Masz słabe hasło! '
-            p.style.color = 'tomato';
-        }
+	) {
+		p.textContent = 'Masz dobre hasło! ';
+		p.style.color = 'gold';
+	} else {
+		p.textContent = 'Masz słabe hasło! ';
+		p.style.color = 'tomato';
+	}
 };
 
 const checkPassword = () => {
-    if(pass.value !== ''){
-        showMsg()
-    }else {
-        p.textContent = 'Nie podales hasla.. '
-        p.style.color = '';
-    }
-}
+	if (pass.value !== '') {
+		showMsg();
+	} else {
+		p.textContent = 'Nie podales hasla.. ';
+		p.style.color = '';
+	}
+};
 
 pass.addEventListener('keyup', checkPassword);
+
+
