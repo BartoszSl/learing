@@ -1,0 +1,66 @@
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	height: 100vh;
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #333;
+}
+
+/* all */
+
+.box {
+	padding: 80px 140px;
+	border-radius: 15px;
+	background-color: #222;
+	box-shadow: 0 0 15px rgba(0, 140, 255, 0.6);
+}
+
+.link {
+	position: relative;
+	padding: 10px 20px;
+	font-size: 48px;
+	color: rgb(0, 140, 255);
+	text-decoration: none;
+}
+
+.link,
+.link::after,
+.link::before {
+	transition: 0.3s; /* transform */
+}
+
+/* first link */
+
+.one::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	height: 3px;
+	width: 100%;
+	background-color: #fff;
+	transform: scaleX(0);
+	transform-origin: right;
+	transition: transform 0.3s;
+}
+
+.one:hover::after {
+	transform: scaleX(1);
+	transform-origin: left;
+}
+
+/* second link */
+
+/* third link */
+
+/* fourthl ink */
+
+/* fifth link */
