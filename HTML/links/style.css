@@ -59,6 +59,44 @@ body {
 
 /* second link */
 
+.two::before,
+.two::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 0;
+}
+
+.two::before {
+	top: -2px;
+	left: -8px;
+	border-top: 0 solid #fff;
+	border-left: 0 solid #fff;
+}
+
+.two::after {
+	bottom: -2px;
+	right: -8px;
+	border-bottom: 0 solid #fff;
+	border-right: 0 solid #fff;
+}
+
+.two:hover::before,
+.two:hover::after {
+	width: 50px;
+	height: 50%;
+}
+
+.two:hover::before {
+	border-top: 3px solid #fff;
+	border-left: 3px solid #fff;
+}
+
+.two:hover::after {
+	border-bottom: 3px solid #fff;
+	border-right: 3px solid #fff;
+}
+
 /* third link */
 
 /* fourthl ink */
