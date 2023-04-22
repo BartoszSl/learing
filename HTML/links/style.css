@@ -99,6 +99,28 @@ body {
 
 /* third link */
 
+.three::before,
+.three::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	bottom: 0;
+	border-bottom: 2px solid #ffffff;
+}
+
+.three::before {
+	right: 50%;
+}
+
+.three::after {
+	left: 50%;
+}
+
+.three:hover::before,
+.three:hover::after {
+	width: 50%;
+}
+
 /* fourthl ink */
 
 /* fifth link */
