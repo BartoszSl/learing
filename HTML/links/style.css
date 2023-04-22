@@ -146,9 +146,72 @@ body {
 	height: 100%;
 }
 
-
-
 /* fifth link */
 
+.five {
+	z-index: 1;
+}
 
+.five:hover {
+	animation: blink 0.5s;
+}
 
+@keyframes blink {
+	0% {
+		opacity: 1;
+	}
+	10% {
+		opacity: 0;
+	}
+	20% {
+		opacity: 0;
+	}
+	30% {
+		opacity: 1;
+	}
+	40% {
+		opacity: 1;
+	}
+	60% {
+		opacity: 0;
+	}
+	75% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+.five::before,
+.five::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	width: 0;
+	background-color: #fff;
+	z-index: -1;
+}
+
+.five::before {
+	left: 0;
+}
+
+.five::after {
+	right: 0;
+}
+
+.five:hover::before,
+.five:hover::after {
+	animation: background 0.5s 0.4s forwards;
+}
+
+@keyframes background {
+	from {
+		width: 0;
+	}
+	to {
+		width: 50%;
+	}
+}
