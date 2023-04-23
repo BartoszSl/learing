@@ -93,7 +93,34 @@ span {
 
 /* Second button */
 
+.slice::before,
+.slice::after {
+	width: 100%;
+	height: 100%;
+	background-color: rgb(25, 147, 230);
+}
+
+.slice::before {
+	top: -50%;
+	left: -100%;
+}
+
+.slice::after {
+	bottom: -50%;
+	right: -100%;
+}
+
+.slice:hover::before {
+	left: 0;
+}
+
+.slice:hover::after {
+	right: 0;
+}
+
 /* Third button */
+
+
 
 /* Fourth button */
 
