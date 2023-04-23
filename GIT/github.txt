@@ -1,0 +1,10 @@
+<!-- 
+        git init - tworzy puste repo
+        git add [nazwa pliku konkretny plik]
+        git add index.html
+
+        git add . - dodaje wszystkie pliki
+        git commit -m - krótki opis zmian, które zrobiliśmy 
+
+        git status - sprawdzamy status plikow w repo
+     -->
