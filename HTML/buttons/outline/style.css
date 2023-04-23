@@ -1,0 +1,32 @@
+body {
+    background-color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 800px;
+}
+
+button {
+    cursor: pointer;
+    background: none;
+    color: white;
+    font-size: 40px;
+}
+
+.normal {
+    border: none;
+}
+
+.circle {
+    margin-top: 50px;
+    border-radius: 50%;
+    height: 200px;
+    width: 200px;
+    border: 1px solid black;
+}
+
+ button:focus {
+     outline: none; 
+}
+ 
