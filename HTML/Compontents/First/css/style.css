@@ -1,0 +1,66 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: #333;
+}
+
+button {
+  position: relative;
+  padding: 1em 2em;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: white;
+  background-color: royalblue;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.btn::focus {
+  outline: none;
+}
+
+.circle {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+  border-radius: 50%;
+  -webkit-transform: translate(-50%, -50%) scale(0);
+          transform: translate(-50%, -50%) scale(0);
+  -webkit-animation: pulse 0.3s;
+          animation: pulse 0.3s;
+}
+
+@-webkit-keyframes pulse {
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(2);
+            transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes pulse {
+  to {
+    -webkit-transform: translate(-50%, -50%) scale(2);
+            transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}/*# sourceMappingURL=style.css.map */
