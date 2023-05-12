@@ -1,0 +1,106 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+  font-family: "Montserrat", sans-serif;
+  background-color: #333;
+}
+
+.nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  background-color: royalblue;
+}
+.nav-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 30px;
+}
+.nav-items a {
+  padding: 2em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  -webkit-transition: background-color 0.3s, color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+.nav-items a:hover {
+  color: royalblue;
+  background-color: #fff;
+}
+
+.search-box {
+  position: relative;
+  -ms-flex-item-align: stretch;
+      align-self: stretch;
+}
+
+.search-input {
+  padding: 2em;
+  width: 300px;
+  background-color: #eee;
+  border: none;
+  color: #333;
+  font-size: 16px;
+  -webkit-transform: translateX(0px) scaleX(0);
+          transform: translateX(0px) scaleX(0);
+  -webkit-transform-origin: right;
+          transform-origin: right;
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
+}
+
+.search-btn {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 80px;
+  border: none;
+  background-color: #3651aa;
+  cursor: pointer;
+}
+
+.search-btn:focus,
+.search-input:focus {
+  outline: none;
+}
+
+.search-btn:focus {
+  background-color: #112565;
+}
+
+.search-input:focus {
+  background-color: #ddd;
+}
+
+.active {
+  -webkit-transform: translateX(-80px) scaleX(1);
+          transform: translateX(-80px) scaleX(1);
+}/*# sourceMappingURL=style.css.map */
