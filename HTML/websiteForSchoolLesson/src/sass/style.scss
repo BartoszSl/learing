@@ -1,0 +1,278 @@
+@use '../sass/colors' as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
+body {
+	display: grid;
+	grid-template-columns: 3fr 1fr;
+	grid-template-rows: 9fr 0.5fr;
+	background-color: #1e1e1e;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.6rem;
+	color: #9e9e9e;
+}
+.hrLine {
+	position: absolute;
+	left: 0;
+	top: 0;
+	background-color: $light-grey;
+}
+
+// Navigation
+
+.nav {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	position: relative;
+	grid-column: 2/3;
+	grid-row: 1/-1;
+
+	.hrLine {
+		width: 1px;
+		height: 100%;
+	}
+
+	&__menu {
+		font-size: 4em;
+		margin: 4.8rem 0;
+		color: $white;
+		font-weight: 700;
+		transition: color 0.4s;
+	}
+
+	&__menu:hover {
+		color: $light-blue;
+	}
+
+	a {
+		text-decoration: none;
+	}
+
+	&__links {
+		margin-left: -5em;
+	}
+
+	&__links a {
+		text-decoration: none;
+		color: $white;
+		font-size: 2em;
+		font-weight: 700;
+		transition: color 0.4s;
+	}
+
+	&__links a:hover {
+		color: $light-blue;
+	}
+
+	&__link {
+		list-style: none;
+		margin-bottom: 3.8rem;
+		span {
+			margin-left: 1em;
+		}
+		i {
+			text-align: center;
+			width: 25px;
+		}
+
+		&-item {
+			list-style: none;
+			margin-left: 4rem;
+			margin-top: 2rem;
+			font-size: 2.4rem;
+			i {
+				width: 1rem;
+			}
+		}
+	}
+
+	&__link:nth-child(2) {
+		i {
+			margin-left: 0.5rem;
+		}
+	}
+
+	&__img {
+		position: relative;
+		overflow: hidden;
+		background-image: url('/dist/img/nav-img.png');
+		background-size: cover;
+		background-position: center;
+		width: 270px;
+		height: 200px;
+		border-radius: 20px;
+		margin-top: 1em;
+		margin-bottom: 8rem;
+		&-shadow {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			position: absolute;
+			width: 100%;
+			height: 20%;
+			bottom: 0;
+			left: 0;
+			background-color: $shadow-color;
+			p {
+				font-weight: 700;
+				color: $white;
+			}
+		}
+	}
+}
+
+// style
+
+// header & main - main for main page
+
+main,
+header {
+	grid-column: 1/2;
+	grid-row: 1/2;
+	padding-left: 5.5rem;
+}
+
+header {
+	h1 {
+		margin-top: 5rem;
+		font-size: 4em;
+		font-weight: 700;
+		color: $white;
+	}
+}
+
+.main {
+	&__carousel {
+		margin-left: 10rem;
+		margin-top: 9rem;
+		width: 50rem;
+		.carousel {
+			.circle {
+				width: 20px;
+				height: 20px;
+				border-radius: 50%;
+				background-color: $light-grey;
+			}
+			.active {
+				background-color: $dark-grey;
+			}
+			&-inner {
+				border-radius: 40px;
+				img {
+					width: 50rem;
+					height: 30rem;
+					border-radius: 40px;
+					overflow: hidden;
+				}
+			}
+			&-item {
+				position: relative;
+				background-position: center;
+				background-size: cover;
+				width: 50rem;
+				height: 30rem;
+				z-index: 0;
+				.shadow {
+					position: absolute;
+					width: 100%;
+					height: 100%;
+					background-color: $shadow-color;
+					z-index: -10;
+				}
+
+				.text {
+					display: flex;
+					flex-direction: column;
+					justify-content: center;
+					height: 100%;
+					z-index: 5;
+					color: $white;
+					padding-left: 2.7rem;
+					h2 {
+						padding-top: 10rem;
+						margin-bottom: 1rem;
+						font-size: 2em;
+						font-weight: 700;
+					}
+					p {
+						width: 309px;
+						font-size: 2rem;
+					}
+				}
+			}
+			&-item-1 {
+				background-image: url('/dist/img/carosuel1.png');
+			}
+			&-item-2 {
+				background-image: url('/dist/img/carosuel2.png');
+				.text {
+					p {
+						width: 400px;
+					}
+				}
+			}
+			&-item-3 {
+				background-image: url('/dist/img/carosuel3.png');
+				.text {
+					p {
+						width: 350px;
+					}
+				}
+			}
+		}
+	}
+	&__contact {
+		margin-top: 8rem;
+		margin-left: 5.5rem;
+		&__title {
+			font-size: 4rem;
+			margin-bottom: 4rem;
+			font-weight: 700;
+			color: $white;
+		}
+		&-items {
+			margin-left: 6rem;
+			margin-bottom: 2rem;
+			font-size: 2em;
+			i {
+				width: 25px;
+				height: 25px;
+			}
+			span {
+				margin-left: 2.4rem;
+			}
+		}
+	}
+}
+
+// footer
+
+footer {
+	position: relative;
+	grid-column: 1/2;
+	grid-row: 2/3;
+	padding-left: 2.7rem;
+	border-top: $light-grey;
+	h2 {
+		font-weight: 400;
+		font-size: 1em;
+		padding: 1em 0;
+	}
+	.hrLine {
+		width: 100%;
+		height: 1px;
+	}
+}
