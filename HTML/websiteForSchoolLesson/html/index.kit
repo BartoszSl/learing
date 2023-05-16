@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pl">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<!-- @include 'styles.kit' -->
+	</head>
+	<body>
+		<!-- @include 'nav.kit' -->
+		<main>
+			<header><h1>Salon Samochodowy</h1></header>
+
+			<section class="main__carousel">
+				<div
+					id="carouselExampleIndicators"
+					class="carousel slide"
+					data-bs-ride="carousel"
+				>
+					<div class="carousel-indicators">
+						<button
+							type="button"
+							data-bs-target="#carouselExampleIndicators"
+							data-bs-slide-to="0"
+							class="active circle"
+							aria-current="true"
+							aria-label="Slide 1"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#carouselExampleIndicators"
+							data-bs-slide-to="1"
+							aria-label="Slide 2"
+							class="circle"
+						></button>
+						<button
+							type="button"
+							data-bs-target="#carouselExampleIndicators"
+							data-bs-slide-to="2"
+							aria-label="Slide 3"
+							class="circle"
+						></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item carousel-item-1 active">
+							<div class="shadow"></div>
+							<div class="text">
+								<h2>das Auto<span></h2>
+								<p>Niemiec płakał jak sprzedawał te cacka</p>
+							</div>
+						</div>
+						<div class="carousel-item carousel-item-2">
+							<div class="shadow"></div>
+							<div class="text">
+								<h2>Gwarancja<span></h2>
+								<p>U nas żadnego gruchota nie znajdziesz, same najlepsze samochody Audi</p>
+							</div>
+						</div>
+						<div class="carousel-item carousel-item-3">
+							<div class="shadow"></div>
+							<div class="text">
+								<h2>Osiągi<span></h2>
+								<p>Same mocne auta, bez wypadkowe z małym przebiegiem</p>
+							</div>
+						</div>
+					</div>
+					<button
+						class="carousel-control-next"
+						type="button"
+						data-bs-target="#carouselExampleIndicators"
+						data-bs-slide="next"
+					>
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</section>
+
+			<section class="main__contact">
+				<h2 class="main__contact__title">Kontakt: </h2>
+					<div class="main__contact-telephone main__contact-items">
+						<i class="fa-solid fa-phone"></i>
+						<span>997 998 112</span>
+					</div>
+					<div class="main__contact-mail main__contact-items">
+						<i class="fa-regular fa-envelope"></i>
+						<span>car@salon.pl</span>
+					</div>
+			</section>
+
+		</main>
+
+		<!-- @include 'footer.kit' -->
+
+		<!-- @include 'script.kit' -->
+	</body>
+</html>
