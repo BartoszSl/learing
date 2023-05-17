@@ -30,10 +30,10 @@
 	<body>
 		<nav class="nav">
 	<div class="hrLine"></div>
-	<a href="/index.html" class="nav__menu">Menu</a>
+	<a href="index.html" class="nav__menu">Menu</a>
 	<ul class="nav__links">
 		<li class="nav__link">
-			<a href="/models.html"><i class="fa-solid fa-car"></i><span>Modele</span></a>
+			<a href="models.html"><i class="fa-solid fa-car"></i><span>Modele</span></a>
 			<ul class="nav__link-items">
 				<li class="nav__link-item">
 					<i class="fa-solid fa-minus"></i><span>Sedan</span>
@@ -42,7 +42,7 @@
 					<i class="fa-solid fa-minus"></i><span>Suv</span>
 				</li>
 				<li class="nav__link-item">
-					<i class="fa-solid fa-minus"></i><span>Coupe</span>
+					<i class="fa-solid fa-minus"></i><span>Kabriolet</span>
 				</li>
 				<li class="nav__link-item">
 					<i class="fa-solid fa-minus"></i><span>Coupe</span>
@@ -50,10 +50,10 @@
 			</ul>
 		</li>
 		<li class="nav__link">
-			<a href="/buy.html"><i class="fa-regular fa-bookmark"></i><span>Zamów</span></a>
+			<a href="buy.html"><i class="fa-regular fa-bookmark"></i><span>Zamów</span></a>
 		</li>
 		<li class="nav__link">
-			<a href="/aboutus.html"><i class="fa-solid fa-address-card"></i><span>O nas</span></a>
+			<a href="aboutus.html"><i class="fa-solid fa-address-card"></i><span>O nas</span></a>
 		</li>
 	</ul>
 	<div class="nav__img">
@@ -66,21 +66,66 @@
 
 		<main>
 			<header><h1>Modele</h1></header>
+
+			<section class="search">
+				<div class="search__input">
+					<input
+						type="text"
+						class="search__input-text searchData"
+						placeholder="Szukaj..."
+					/>
+					<i class="fa-solid fa-magnifying-glass button"></i>
+				</div>
+				<div class="search__info">
+					<p>*Mamy tylko Sedan, Suv, Kabriolet i Coupe</p>
+					<p class="search__info-alert">
+						<span class="error-model"></span> nie ma w naszej bazie !
+					</p>
+				</div>
+			</section>
+
+			<section class="car">
+				<h2 class="car__title">Audi <span class="carModel">Sedan</span></h2>
+				<div class="car__info">
+					<img src="./dist/img/carModel1.png" alt="Audi Sedan samochód" />
+					<div class="car__info-text">
+						<p>Kolor: <span class="kolor">Zielony</span></p>
+						<p>Slnik: <span class="silnik">Dobry</span></p>
+						<p>Paliwo: <span class="paliwo">Nie Drogie</span></p>
+						<p>Przebieg: <span class="przebieg">Ostatnio kręcone</span></p>
+					</div>
+				</div>
+				<div class="car__prize">
+					<p class="car__prize-main">
+						Cena:
+						<span class="prizeValue">62 453 </span>
+						zł
+					</p>
+					<p class="car__prize-last">
+						*Najniższa cena z ostatnich 31 dni:
+						<span class="lastPrizeValue">82 455</span>
+						zł
+					</p>
+				</div>
+				<div class="car__buy">
+					<button class="car__buy-btn">Kupuj</button>
+					<p class="car__buy-alert">Brak środków na końcie</p>
+				</div>
+			</section>
 		</main>
 
-        <footer>
+		<footer>
     <div class="hrLine"></div>
     <h2>Stronę wykonali: <span class="white">Szymon Rak</span> i <span class="white">Bartosz Ślusarczyk</span></h2>
 </footer>
 
+		<script src="dist/js/models.min.js"></script>
 		<script
 	src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
 	integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
 	crossorigin="anonymous"
 ></script>
 
-<script src="dist/js/main.min.js"></script>
 
 	</body>
 </html>
-
