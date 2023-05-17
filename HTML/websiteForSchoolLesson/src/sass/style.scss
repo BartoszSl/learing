@@ -41,7 +41,7 @@ body {
 	grid-row: 1/-1;
 
 	.hrLine {
-		width: 1px;
+		width: 2px;
 		height: 100%;
 	}
 
@@ -108,7 +108,7 @@ body {
 	&__img {
 		position: relative;
 		overflow: hidden;
-		background-image: url('/dist/img/nav-img.png');
+		background-image: url('../img/nav-img.png');
 		background-size: cover;
 		background-position: center;
 		width: 270px;
@@ -127,6 +127,7 @@ body {
 			left: 0;
 			background-color: $shadow-color;
 			p {
+				margin-top: 1rem;
 				font-weight: 700;
 				color: $white;
 			}
@@ -138,11 +139,10 @@ body {
 
 // header & main - main for main page
 
-main,
-header {
+main {
 	grid-column: 1/2;
 	grid-row: 1/2;
-	padding-left: 5.5rem;
+	padding-left: 10rem;
 }
 
 header {
@@ -156,7 +156,7 @@ header {
 
 .main {
 	&__carousel {
-		margin-left: 10rem;
+		margin-left: 5rem;
 		margin-top: 9rem;
 		width: 50rem;
 		.carousel {
@@ -214,10 +214,10 @@ header {
 				}
 			}
 			&-item-1 {
-				background-image: url('/dist/img/carosuel1.png');
+				background-image: url('../img/carosuel1.png');
 			}
 			&-item-2 {
-				background-image: url('/dist/img/carosuel2.png');
+				background-image: url('../img/carosuel2.png');
 				.text {
 					p {
 						width: 400px;
@@ -225,7 +225,7 @@ header {
 				}
 			}
 			&-item-3 {
-				background-image: url('/dist/img/carosuel3.png');
+				background-image: url('../img/carosuel3.png');
 				.text {
 					p {
 						width: 350px;
@@ -236,7 +236,6 @@ header {
 	}
 	&__contact {
 		margin-top: 8rem;
-		margin-left: 5.5rem;
 		&__title {
 			font-size: 4rem;
 			margin-bottom: 4rem;
@@ -258,6 +257,266 @@ header {
 	}
 }
 
+// Modele main
+
+.search {
+	margin-top: 8rem;
+	&__input {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		width: 34.5rem;
+		height: 5rem;
+		background-color: #fff;
+		overflow: hidden;
+		border-radius: 30px;
+		border: 1px solid white;
+		input {
+			height: 100%;
+			width: 80%;
+			background-color: #1e1e1e;
+			border: none;
+			padding-left: 2.6rem;
+			color: $light-grey;
+			font-weight: 700;
+		}
+		i {
+			width: 20%;
+			text-align: center;
+			font-size: 4rem;
+			padding-right: 1rem;
+			color: #1e1e1e;
+			cursor: pointer;
+		}
+	}
+
+	&__info {
+		margin-left: 2rem;
+		margin-top: 1em;
+		width: 25.5rem;
+		font-weight: 700;
+		font-size: 1.4rem;
+		&-alert {
+			display: none;
+			margin-top: 1em;
+			font-weight: 400;
+			font-size: 1.8rem;
+			.error-model {
+				color: $cta-color;
+				font-weight: 700;
+			}
+		}
+	}
+}
+
+.car {
+	display: flex;
+	flex-direction: column;
+	&__title {
+		margin-top: 3rem;
+		margin-left: 5rem;
+		font-size: 2em;
+		color: $white;
+		font-weight: 700;
+	}
+	&__info {
+		display: flex;
+		margin-top: 3rem;
+		img {
+			width: 50rem;
+			height: 28rem;
+			border-radius: 3rem;
+		}
+		&-text {
+			margin-left: 5rem;
+			p {
+				color: $white;
+				width: 225px;
+				font-size: 2.4rem;
+				margin-top: 1.4rem;
+				span {
+					color: $light-grey;
+				}
+			}
+		}
+	}
+	&__prize {
+		margin-top: 3.5rem;
+		margin-left: 5rem;
+		&-main {
+			font-size: 2em;
+			color: $white;
+		}
+		&-last {
+			margin-top: -1rem;
+			font-size: 1.2rem;
+		}
+		.prizeValue,
+		.lastPrizeValue {
+			font-weight: 700;
+		}
+	}
+	&__buy {
+		margin-top: 3.5rem;
+		margin-left: 5rem;
+		padding-bottom: 5rem;
+		&-btn {
+			font-size: 2em;
+			padding: 0 4rem;
+			color: $white;
+			font-weight: 700;
+			background-color: $light-blue;
+			border: none;
+			border-radius: 2rem;
+		}
+		&-alert {
+			display: none;
+			margin-top: 1rem;
+			color: $cta-color;
+		}
+	}
+}
+
+// Order Section
+
+.car__gallery {
+	display: grid;
+	grid-template-columns: minmax(min-content, 300px) minmax(200px, 1fr);
+	gap: 6rem;
+	margin-top: 5.7rem;
+	&-item {
+		display: flex;
+		align-items: end;
+		position: relative;
+		background-position: center;
+		background-size: cover;
+		width: 40rem;
+		height: 27.5rem;
+		border-radius: 3rem;
+		overflow: hidden;
+		z-index: 0;
+		.shadow {
+			display: block;
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			background-color: $shadow-color;
+			z-index: -10;
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+		&__text {
+			display: grid;
+			grid-template-columns: repeat(2, 2fr);
+			margin-left: 3rem;
+			margin-bottom: 1rem;
+			opacity: 0;
+			transition: opacity 0.3s;
+			.location {
+				grid-column: 1/3;
+				grid-row: 1/2;
+				span {
+					font-weight: 700;
+				}
+			}
+			i,
+			span {
+				font-size: 2rem;
+				color: $white;
+			}
+
+			span {
+				margin-left: 1rem;
+			}
+			.rates {
+				margin-left: 3rem;
+				i {
+					font-size: 2.2rem;
+					color: $cta-color;
+				}
+			}
+		}
+		&-1 {
+			background-image: url('../img/carGallery1.png');
+		}
+		&-2 {
+			background-image: url('../img/carGallery2.png');
+		}
+		&-3 {
+			background-image: url('../img/carGallery3.png');
+		}
+		&-4 {
+			background-image: url('../img/carGallery4.png');
+		}
+
+		&:hover {
+			.shadow {
+				opacity: 1;
+			}
+			.car__gallery-item__text {
+				opacity: 1;
+			}
+		}
+	}
+}
+
+.timer {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 32rem;
+	height: 4.5rem;
+	margin: 5rem 0;
+	background-color: $light-blue;
+	border-radius: 3rem;
+	&__text {
+		color: $white;
+		font-weight: 700;
+	}
+}
+
+// AboutUS 
+
+.aboutUs {
+	color: $white;
+	.title {
+		font-weight: 700;
+		font-size: 2em;
+	}
+	
+	.section {
+		margin-bottom: 5.2rem;
+	}
+
+	.enter {
+		margin-left: 5rem;
+	}
+
+	&__description {
+		width: 56rem;
+		margin-top: 5.2rem;
+		color: $light-grey;
+	}
+
+	.blue {
+		color: $light-blue;
+	}
+
+	.grey {
+		color: $light-grey;
+	}
+
+	.gold {
+		color: $cta-color;
+	}
+
+	&__company, &__bhp {
+		&-info {
+			margin-top: 2rem;
+		}
+	}
+}
+
 // footer
 
 footer {
@@ -273,6 +532,6 @@ footer {
 	}
 	.hrLine {
 		width: 100%;
-		height: 1px;
+		height: 2px;
 	}
 }
