@@ -12,11 +12,57 @@
 
 		<main>
 			<header><h1>Modele</h1></header>
+
+			<section class="search">
+				<div class="search__input">
+					<input
+						type="text"
+						class="search__input-text searchData"
+						placeholder="Szukaj..."
+					/>
+					<i class="fa-solid fa-magnifying-glass button"></i>
+				</div>
+				<div class="search__info">
+					<p>*Mamy tylko Sedan, Suv, Kabriolet i Coupe</p>
+					<p class="search__info-alert">
+						<span class="error-model"></span> nie ma w naszej bazie !
+					</p>
+				</div>
+			</section>
+
+			<section class="car">
+				<h2 class="car__title">Audi <span class="carModel">Sedan</span></h2>
+				<div class="car__info">
+					<img src="./dist/img/carModel1.png" alt="Audi Sedan samochód" />
+					<div class="car__info-text">
+						<p>Kolor: <span class="kolor">Zielony</span></p>
+						<p>Slnik: <span class="silnik">Dobry</span></p>
+						<p>Paliwo: <span class="paliwo">Nie Drogie</span></p>
+						<p>Przebieg: <span class="przebieg">Ostatnio kręcone</span></p>
+					</div>
+				</div>
+				<div class="car__prize">
+					<p class="car__prize-main">
+						Cena:
+						<span class="prizeValue">62 453 </span>
+						zł
+					</p>
+					<p class="car__prize-last">
+						*Najniższa cena z ostatnich 31 dni:
+						<span class="lastPrizeValue">82 455</span>
+						zł
+					</p>
+				</div>
+				<div class="car__buy">
+					<button class="car__buy-btn">Kupuj</button>
+					<p class="car__buy-alert">Brak środków na końcie</p>
+				</div>
+			</section>
 		</main>
 
-        <!-- @include 'footer.kit' -->
+		<!-- @include 'footer.kit' -->
 
+		<script src="dist/js/models.min.js"></script>
 		<!-- @include 'script.kit' -->
 	</body>
 </html>
-
