@@ -1,9 +1,9 @@
-const person = {
-    name: 'Bartek',
-    age: 17,
-    hobbie: ['Gym', 'Cooking']
+const person: {
+    role: [number, string]
+} = {
+    role: [1, 'test']
 }
 
-const favouriteActivites: string[] = person.hobbie;
+person.role.push('test2')
 
-console.log(favouriteActivites);
+console.log(person.role);
