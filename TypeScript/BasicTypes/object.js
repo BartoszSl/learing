@@ -1,7 +1,5 @@
 var person = {
-    name: 'Bartek',
-    age: 17,
-    hobbie: ['Gym', 'Cooking']
+    role: [1, 'test']
 };
-var favouriteActivites = person.hobbie;
-console.log(favouriteActivites);
+person.role.push('test2');
+console.log(person.role);
