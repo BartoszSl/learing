@@ -1,9 +1,24 @@
-const person: {
-    role: [number, string]
-} = {
-    role: [1, 'test']
+enum Roles {
+	ADMIN,
+	AUTHOR,
+	RANK1,
+	RANK0,
 }
 
-person.role.push('test2')
+const person = {
+	name: 'Bartek',
+	hobbies: [1, 'Test'],
+	role: Math.floor(Math.random() * 4),
+};
 
-console.log(person.role);
+person.hobbies.push('elo')
+
+if (person.role === Roles.ADMIN) {
+	console.log('Jesteś Adminem');
+} else if (person.role === Roles.AUTHOR) {
+	console.log('Jesteś Autorem');
+} else if (person.role === Roles.RANK1) {
+	console.log('Jesteś Rank1');
+} else if (person.role === Roles.RANK0) {
+	console.log('Jesteś Rank0, noobie');
+}
