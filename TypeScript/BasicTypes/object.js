@@ -7,10 +7,12 @@ var Roles;
 })(Roles || (Roles = {}));
 var person = {
     name: 'Bartek',
-    role: Math.floor(Math.random() * 4)
+    hobbies: [1, 'Test'],
+    role: Math.floor(Math.random() * 4),
 };
+person.hobbies.push('elo');
 if (person.role === Roles.ADMIN) {
-    console.log('Jesteś Adminem');
+    console.log('Jesteś Adminem!');
 }
 else if (person.role === Roles.AUTHOR) {
     console.log('Jesteś Autorem');
