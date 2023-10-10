@@ -1,0 +1,11 @@
+.header {
+	z-index: 0;
+	&--img {
+		height: 25rem;
+		width: 110%;
+		transform: rotateZ(-5deg) translateY(-4rem) translateX(-1rem);
+		object-fit: cover;
+		overflow: hidden;
+		box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+	}
+}

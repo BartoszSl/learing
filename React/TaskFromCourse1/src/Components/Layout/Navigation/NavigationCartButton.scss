@@ -1,0 +1,26 @@
+.nav {
+	&--orders {
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+		padding: 0 3rem;
+		background-color: #4d1601;
+		border-radius: 25px;
+		font-weight: bold;
+		color: white;
+		font-size: 1rem;
+		border: none;
+		cursor: pointer;
+		&__text {
+			display: flex;
+			gap: 0.5rem;
+		}
+		&__badge {
+			background-color: #b94517;
+			padding: 0.25rem 1rem;
+			border-radius: 25px;
+			margin-left: 1rem;
+			font-weight: bold;
+		}
+	}
+}
